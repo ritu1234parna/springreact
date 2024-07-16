@@ -15,7 +15,7 @@ class App extends React.Component {
     // execute the code
     componentDidMount() {
         axios.get(
-                "http://localhost:8080/employee/getEmployees"
+                "https://jsonplaceholder.typicode.com/users"
             )
             .then((res) => {
                 this.setState({
@@ -49,12 +49,12 @@ class App extends React.Component {
                                 </div>
                                 <div>
                                     <strong>
-                                        {"First_Name: "}
+                                        {"User_Name: "}
                                     </strong>
-                                    {item.firstName},
+                                    {item.username},
                                 </div>
                                 <div>
-                                    Last_Name: {item.lastName},
+                                    Full_Name: {item.name},
                                 </div>
                                 <div>
                                     User_Email: {item.email}
